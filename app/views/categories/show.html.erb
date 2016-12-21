@@ -1,0 +1,18 @@
+
+
+<h1>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</h1>
+
+<p>
+  <strong>Description:</strong>
+  <%= @category.description %>
+</p>
+<h3>Products under this category</h3>
+<% Product.where(category_id: @category.id).each do |product|%>
+<li><%= link_to product.name %></li>
+<% end %>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

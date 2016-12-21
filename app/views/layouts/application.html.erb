@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Farm Mall" %></title>
+    
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "vendor/modernizr"%>
+    <%= csrf_meta_tags %>
+
+  </head>
+
+  <body>  
+
+
+  <%= render 'layouts/topbar' %>
+
+
+
+  <div id="main-content" class="row full-min-height">
+  <div class="small-12 columns">
+  <div class="row">
+  <div class="small-12 medium-8 large-7 small-centered columns">
+  <%= render 'layouts/alerts' %>
+    </div>
+  <div class="small-12 medium-12 large-12 columns">
+    <%= yield %>
+  </div>
+  </div>
+  </div>
+  <footer class="row">
+    <div class="large-12 columns"><hr>
+      <div class="row">
+        <div class="small-6 medium-6 large-6 columns">
+         <p>©Farm Mall 2016</p>
+        </div>
+        <div class="small-6 medium-6 large-6 columns">
+       <div class="logo-bottom"><%= image_tag "logo.png"%></div>
+        </div>
+     </div> 
+   </footer>
+   <%= javascript_include_tag "application" %>
+  </body>
+  
+</html>

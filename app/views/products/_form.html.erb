@@ -1,0 +1,74 @@
+<dic class="form-container small-10 small-centered medium-8 large-7 columns">
+
+<%= form_for @product, html: { multipart: true} do |f| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+  <div class="small-2 columns left-text">
+
+    <%= f.label :name %>
+  </div>
+  <div class="small-10 columns left-text">
+    <%= f.text_field :name, required: true, placeholder: "Cow" %>
+  </div>
+  </div>
+  <div class="row">
+    <div class="small-2 columns left-text">
+      <%= f.label :description %>
+    </div>    
+    <div class="small-10 columns left-text">
+   <%= f.text_area :description, required: true, placeholder: "High grade Fresian, producing 100 litres of milk a day."%>
+    </div>
+  </div>
+  <div class=row>
+    <div class="small-2 columns left-text">
+      <%= f.label :"(The nearest)City/town"%>
+    </div>
+    <div class="small-10 columns left-text">
+      <%= f.text_field :town, required: true, placeholder: "Nakuru" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-2 columns left-text">
+      <%= f.label :price %>
+    </div>
+    <div class="small-10 columns left-text">
+      <%= f.text_field :price, required: true, placeholder: "3000000" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-2 columns left-text">
+    <%= f.label :phone_number %>
+    </div>
+     <div class="small-10 columns left-text">
+    <%= f.text_field :phone_number, required: true, placeholder: "0717078607" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-2 columns left-text">
+      <%= f.label :"Category" %>
+    </div>
+    <div class="small-2 columns left-text">
+    <%= select_tag(:category_id, options_from_collection_for_select(Category.all, :id, :name), include_blank: "Select Category")%>
+    </div>
+    <div class="small-8 columns">
+    </div>
+  </div>
+   <div class="field">
+     <%= f.label :image %>
+     <%= f.file_field :image %>
+  </div><%= f.submit "Done", class: "button"%></div>
+
+<% end %>
+</div>

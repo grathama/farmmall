@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'gotham-rounded';
+  src: url(gotham-rounded-medium.otf);
+}
+
+
+body {
+
+  color: #000;
+
+}
+
+  
+
+
+.form-container{
+  padding: 3% 3%;
+  .switch>div{
+    position: relative;
+    top: -5px;
+  }
+}
+.products-grid{
+  .product-card{
+    width:220px;
+    margin:auto;
+     .productview img {
+       height: 220px;
+       width:100%;
+      }
+      .product-info { .title {height: 1em}
+       background: #030;
+       color: #fff;}
+    }
+}
+
+     
+.logo-bottom {
+  height: 50px;
+  width: 50px;
+}
+
+.title-bar{
+  background: #ffe;
+  padding: 0.9rem; 
+}
+
+

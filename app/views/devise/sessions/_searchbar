@@ -1,0 +1,7 @@
+<div class="row">
+  <div class="small-12 columns">
+    <% form_for @product do |f| %>
+      <% f.search :product, placeholder: "search"%>
+    <% end %>
+  </div>
+</div>
