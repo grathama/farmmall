@@ -4,8 +4,8 @@
 }
 
 
-body {
-
+body, html, #main-content {
+  background-color: #fff;
   color: #000;
 
 }
@@ -15,6 +15,7 @@ body {
 
 .form-container{
   padding: 3% 3%;
+  background-color: #fff;
   .switch>div{
     position: relative;
     top: -5px;
@@ -41,8 +42,15 @@ body {
 }
 
 .title-bar{
-  background: #ffe;
+  background: #fff;
   padding: 0.9rem; 
+}
+.row{
+  padding: 0px;
+}
+
+#top-bar{
+  height: 50px;
 }
 
 

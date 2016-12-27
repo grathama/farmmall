@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <%=display_meta_tags %>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -15,19 +16,18 @@
 
   <body>  
 
-
-  <%= render 'layouts/topbar' %>
-
-
-
+   <%= render 'layouts/topbar' %>
+  
+  <div class="container">
   <div id="main-content" class="row full-min-height">
   <div class="small-12 columns">
-  <div class="row">
+
   <div class="small-12 medium-8 large-7 small-centered columns">
-  <%= render 'layouts/alerts' %>
+   <%= render 'layouts/alerts' %>
     </div>
   <div class="small-12 medium-12 large-12 columns">
     <%= yield %>
+  </div>
   </div>
   </div>
   </div>

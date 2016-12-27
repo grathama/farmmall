@@ -6,7 +6,8 @@ gem 'foundation-rails'
 gem 'masonry-rails'
 gem 'jquery-turbolinks'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
-gem 'pg_search'          
+gem 'pg_search'   
+gem 'meta-tags'    
 
 
 
